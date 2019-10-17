@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.wyf.classchat">
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.autofocus"/>
+
+    <application
+        android:allowBackup="true"
+        android:name=".ClassChatApplication"
+        android:icon="@mipmap/ic_classchat"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1104161228178543#qqdemo"/>
+
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true"/>
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name=".service.AutoUpdateService"/>
+
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.wyf.classchat.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <activity
+            android:name=".WelcomeActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".feature.login.LoginActivity"/>
+        <activity
+            android:name=".feature.home.MainActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"/>
+        <activity
+            android:name=".feature.group.ScanActivity"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".feature.message.chat.ChatActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/MyTheme"/>
+        <activity android:name=".feature.login.ServiceTermsActivity"/>
+        <activity android:name=".feature.contact.detail.ContactInfoActivity"/>
+        <activity
+            android:name=".feature.contact.create.CreateGroupsActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".feature.contact.manage.ManageGroupsActivity" />
+        <activity android:name=".feature.contact.groups.GroupsActivity"/>
+        <activity android:name=".feature.me.setting.SettingsActivity"/>
+        <activity android:name=".feature.me.flash.FlashActivity"/>
+        <activity android:name=".feature.me.UserInfoActivity"/>
+        <activity android:name=".feature.me.weather.WeatherActivity"/>
+        <activity android:name=".feature.me.weather.WeatherAreaActivity"/>
+        <activity android:name=".feature.group.GroupSettingsActivity"/>
+        <activity
+            android:name=".feature.group.notice.NoticeActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            />
+        <activity android:name=".feature.group.vote.VoteActivity"/>
+        <activity android:name=".feature.group.vote.VoteResultActivity"/>
+        <activity android:name=".feature.group.vote.StartVoteActivity"/>
+        <activity android:name=".feature.group.vote.VoteResult2Activity"/>
+        <activity
+            android:name=".feature.group.SettingAboutActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".feature.group.rollcall.RollCallActivity"/>
+        <activity android:name=".feature.group.GroupMembersActivity"/>
+        <activity android:name=".feature.group.file.ShareFileActivity"/>
+        <activity android:name=".feature.group.file.SelectFileActivity"/>
+        <activity android:name=".feature.group.clazz.ClazzActivity"/>
+        <activity android:name=".feature.group.vote.VoteChoosePreson"></activity>
+    </application>
+
+</manifest>

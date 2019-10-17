@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/chat_room_bg"
+    tools:context="com.example.wyf.classchat.feature.message.chat.ChatActivity">
+
+    <include
+        layout="@layout/layout_appbar" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/iv_voice" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignTop="@+id/iv_voice"
+        android:background="#ccc" />
+
+    <include
+        layout="@layout/layout_inputbar"/>
+    <FrameLayout
+        android:id="@+id/fl_expression_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/notice"
+        layout="@layout/activity_chat_notice_item"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/register"
+        layout="@layout/dialog_register"
+        android:visibility="gone" />
+
+</LinearLayout>

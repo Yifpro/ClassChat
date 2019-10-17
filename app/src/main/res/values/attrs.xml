@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ContactInfoItemView">
+        <attr name="infoIcon" format="reference"/>
+        <attr name="infoText"  format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="AutoToolbar">
+        <attr name="titleText" format="string"/>
+        <attr name="leftText"  format="string"/>
+        <attr name="rightText" format="string"/>
+        <attr name="leftIcon" format="reference"/>
+        <attr name="rightIcon" format="reference"/>
+    </declare-styleable>
+</resources>

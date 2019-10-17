@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_me"
+        android:title="me"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_me1"
+        android:title="创建班群"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="never"/>
+
+</menu>

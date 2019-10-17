@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arr_fragment_me_item">
+        <item>天气</item>
+        <item>手电筒</item>
+        <item>二维码</item>
+        <item>设置</item>
+       <!-- <item>更换主题</item>-->
+    </string-array>
+</resources>

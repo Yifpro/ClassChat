@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arr_contact_head">
+        <item>创建圈</item>
+        <item>加入新的圈</item>
+        <item>我管理的圈</item>
+        <item>已加入的圈</item>
+    </string-array>
+</resources>

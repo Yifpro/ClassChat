@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.wyf.classchat.feature.me.UserInfoActivity">
+
+    <include
+        layout="@layout/activity_select_head"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true">
+
+        <include layout="@layout/layout_appbar"/>
+
+        <FrameLayout
+            android:id="@+id/userheader_userinfo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/corner_mark_bg"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_photo_camera_whit"
+                android:contentDescription="@string/content_description_default" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/et_user_head"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_classchat"
+                android:transitionName="@string/translate_head"
+                tools:targetApi="lollipop" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:id="@+id/iv_name"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/ic_contact_id"
+                android:contentDescription="@string/content_description_default"
+                android:layout_marginRight="10dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:hint="@string/name"
+                    android:maxLength="16"/>
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:id="@+id/iv_sex"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="10dp"
+                android:scaleType="centerInside"
+                android:background="@drawable/ic_contact_sex"
+                android:contentDescription="@string/content_description_default"
+                android:layout_marginRight="10dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_man"
+                    style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/man"/>
+
+                <RadioButton
+                    android:id="@+id/rb_woman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/woman"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:id="@+id/iv_sign"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="10dp"
+                android:scaleType="centerInside"
+                android:background="@drawable/ic_contact_sign"
+                android:contentDescription="@string/content_description_default"
+                android:layout_marginRight="10dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_user_sign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/sign"
+                    android:inputType="text"
+                    android:maxLength="128"/>
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingLeft="15dp"-->
+        <!--android:paddingRight="15dp">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="20dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:scaleType="centerInside"-->
+        <!--android:src="@drawable/icon_wechat"/>-->
+
+        <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<android.support.design.widget.TextInputEditText-->
+        <!--andrnumberd:idnumbnumbcontactcontactId@+id/user_year_userinfo"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="4"-->
+        <!--android:gravity="right"-->
+        <!--android:hint="年"-->
+        <!--android:inputTyidmber"-->
+        <!--android:maxLength="4"/>-->
+
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<android.support.design.widget.TextInputEditText-->
+        <!--andrnumberd:idnumbnumbcontactcontactId@+id/user_month_userinfo"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="2"-->
+        <!--android:gravity="right"-->
+        <!--android:hint="月"-->
+        <!--android:inputTyidmber"-->
+        <!--android:maxLength="2"/>-->
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<android.support.design.widget.TextInputEditText-->
+        <!--andrnumberd:idnumbnumbcontactcontactId@+id/user_day_userinfo"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="2"-->
+        <!--android:gravity="right"-->
+        <!--android:hint="日"-->
+        <!--android:inputTyidmber"-->
+        <!--android:maxLength="2"/>-->
+        <!--</android.support.design.widget.TextInputLayout>-->
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:id="@+id/iv_xz"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="10dp"
+                android:scaleType="centerInside"
+                android:background="@drawable/ic_contact_xz"
+                android:contentDescription="@string/content_description_default"
+                android:layout_marginRight="10dp" />
+
+            <Spinner
+                android:id="@+id/spinner_constellation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/arrays_constellation"
+                android:spinnerMode="dropdown">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:id="@+id/iv_address"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="10dp"
+                android:scaleType="centerInside"
+                android:background="@drawable/ic_contact_address"
+                android:contentDescription="@string/content_description_default"
+                android:layout_marginRight="10dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_user_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/address"
+                    android:inputType="text"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_notice_discuss"
+    android:layout_width="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_margin="5dp"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+
+    >
+
+
+    <EditText
+        app:theme="@style/LoginEditText"
+        android:id="@+id/et_rollcall_matching_code"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/btn_discuss_send"
+        android:layout_width="40dp"
+        android:textColor="#fff"
+        android:layout_height="30dp"
+        android:background="@drawable/shape_btn_corner"
+        android:text="发送"
+        android:layout_marginRight="5dp"
+         />
+
+    <Button
+        android:text="文件上传"
+        android:layout_gravity="center"
+        android:id="@+id/btn_upload_file"
+        android:layout_width="40dp"
+        android:textColor="#fff"
+        android:layout_height="30dp"
+        android:background="@drawable/shape_btn_corner"
+        android:textSize="10dp"
+        android:layout_marginRight="5dp"
+        />
+
+
+</LinearLayout>

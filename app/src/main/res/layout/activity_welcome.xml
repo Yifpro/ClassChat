@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_splash_activity">
+
+    <ImageView
+        android:id="@+id/iv_blackboard"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/bg_splash_page"
+        android:contentDescription="@string/content_description_default" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_anim_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="68dp"
+        android:transitionName="@string/translate_title"
+        tools:targetApi="lollipop">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/ic_classchat"
+            android:contentDescription="@string/content_description_default" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textColor="#10ee90"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+</RelativeLayout>

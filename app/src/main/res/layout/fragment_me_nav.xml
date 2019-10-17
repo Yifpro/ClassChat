@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_nav"
+    android:layout_width="match_parent"
+    android:layout_height="220dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_fragment_me_head" />
+
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/tv_sign"
+        android:layout_alignParentEnd="true">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_classchat"
+            android:transitionName="@string/translate_head"
+            android:layout_weight="0.15"/>
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="未设置"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sign"
+        android:layout_above="@+id/btn_fab"
+        android:layout_toLeftOf="@+id/btn_fab"
+        android:layout_marginBottom="10dp"
+        android:gravity="right"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_fab"
+        app:backgroundTint="@color/colorPrimary"
+        app:rippleColor="#33728dff"
+        fresco:borderWidth="0dp"
+        fresco:fabSize="mini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
+        android:layout_toStartOf="@+id/ll_info"
+        android:src="@drawable/ic_edit" />
+</RelativeLayout>

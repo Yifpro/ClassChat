@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+
+                android:clickable="true"
+                android:orientation="vertical">
+
+    <LinearLayout
+
+        android:id="@+id/ll_rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_appbar"/>
+
+        <include layout="@layout/fragment_notice_see_content"/>
+
+        <include layout="@layout/fragment_notice_see_file"/>
+
+        <include layout="@layout/fragment_notice_see_discuss_item"/>
+
+        <include
+            android:id="@+id/ic_file_up"
+            layout="@layout/fragment_see_notice_discuss"/>
+
+    </LinearLayout>
+
+
+
+    <include
+        android:id="@+id/ic_file"
+        layout="@layout/activity_select_file"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll_download"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_toum"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/toum"/>
+
+        <TextView
+            android:id="@+id/tv_download"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="下载"
+            android:textSize="16sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary"
+            />
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_flash_light_on"
+                android:id="@+id/bg_flash">
+
+    <ImageView
+        android:id="@+id/iv_switch"
+        android:background="@drawable/ic_flash_light_on"
+        android:layout_marginBottom="145dp"
+        android:contentDescription="@string/content_description_default"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="60dp"
+        android:layout_height="120dp"/>
+    <ImageView
+        android:id="@+id/iv_sos"
+        android:background="@drawable/ic_sos_off"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/content_description_default"
+        android:layout_marginBottom="30dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+
+</RelativeLayout>

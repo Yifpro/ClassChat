@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="2500dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:orientation="horizontal">
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:text="发起人"/>
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:id="@+id/vote_userid"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="userId"
+    />
+</LinearLayout>
+       <LinearLayout
+
+           android:layout_width="match_parent"
+           android:layout_height="30dp"
+           android:orientation="horizontal">
+          <TextView
+              android:textSize="16sp"
+              android:textColor="@color/black"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:text="状态"/>
+           <TextView
+               android:textSize="16sp"
+               android:textColor="@color/black"
+               android:id="@+id/vote_state"
+               android:layout_alignParentRight="true"
+               android:layout_width="0dp"
+               android:textAlignment="center"
+               android:layout_weight="1"
+               android:layout_height="match_parent"
+               android:text="进行中"/>
+       </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="评优标题"/>
+            <TextView
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:id="@+id/vote_title"
+                android:layout_width="0dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_below="@+id/vote_userid"
+                android:layout_alignParentLeft="true"
+                android:text="评优标题"/>
+        </LinearLayout>
+<include layout="@layout/vote_item_time"/>
+
+    <include layout="@layout/vote_single"></include>
+    <include layout="@layout/vote_multiple"></include>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+        <Button
+        android:id="@+id/vote_toupiao"
+        android:layout_width="140dp"
+
+        android:layout_height="match_parent"
+        android:text="确定"/>
+        <Button
+            android:layout_width="140dp"
+            android:paddingRight="80dp"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_votedel"
+            android:text="删除"/>
+    </LinearLayout>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#CFCFCF"></View>
+    </LinearLayout>

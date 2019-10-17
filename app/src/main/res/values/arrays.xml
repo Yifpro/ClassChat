@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arr_fragment_me_settings">
+        <item>换肤</item>
+        <item>清除缓存</item>
+        <item>声音提醒</item>
+        <item>震动提醒</item>
+        <item>软件更新</item>
+        <item>关于我们</item>
+        <item>退出登录</item>
+    </string-array>
+    <string-array name="arr_activity_setttings_recycle_item">
+        <item>公告</item>
+        <item>文件</item>
+        <item>考勤</item>
+        <item>评优</item>
+        <item>相册</item>
+        <item>日历</item>
+        <item>课程</item>
+        <item>更多</item>
+    </string-array>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_notice_time"
+            android:textSize="18sp"
+            android:textColor="@color/contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3-2" />
+
+        <TextView
+            android:id="@+id/tv_clazz"
+            android:layout_toEndOf="@+id/tv_notice_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="你好"
+            android:textColor="@color/contact_name"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_registering"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:text="点名中..."
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="应到 "
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_should"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="@color/contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text=" 人   实到 "
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_actually"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="@color/contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text=" 人   请假 "
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_ill"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="@color/contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text=" 人   缺勤 "
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_lack"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="@color/contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text=" 人"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

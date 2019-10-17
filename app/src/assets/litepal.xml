@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <dbname value="com.example.wyf.classchat"/>
+    <version value="1"/>
+
+    <list>
+        <mapping class="com.example.wyf.classchat.db.Province"/>
+        <mapping class="com.example.wyf.classchat.db.City"/>
+        <mapping class="com.example.wyf.classchat.db.County"/>
+    </list>
+</litepal>

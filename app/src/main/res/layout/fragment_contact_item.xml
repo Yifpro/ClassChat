@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EBEBEB"
+        android:textColor="@color/contact_letter"
+        android:paddingLeft="10dip"
+        android:paddingTop="2dip"
+        android:visibility="gone"
+        android:textSize="12dp"
+        android:paddingBottom="2dip"
+        android:text="A"/>
+
+    <LinearLayout
+        android:id="@+id/ll_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/tv_notice_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="hahah"
+            android:textColor="@color/contact_name"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</LinearLayout>

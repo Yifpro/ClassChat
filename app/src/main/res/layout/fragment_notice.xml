@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gaywhite"
+              android:clickable="true"
+              android:orientation="vertical"
+    >
+
+    <include layout="@layout/layout_appbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/et_notice_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:hint="标题(必填) , 4-40字"
+            android:maxLength="40"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/et_rollcall_matching_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="正文(必填) , 15-500字"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_member_file"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <include
+            android:id="@+id/ic_fragment_file"
+            layout="@layout/fragment_notice_file_item"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_member_display"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:orientation="vertical"
+            android:paddingLeft="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:text="接收人 ："
+                android:textSize="8sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_member_display"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="5dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_file_display"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_member_display"
+            android:orientation="vertical"
+            android:paddingLeft="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:text="上传文件 ："
+                android:textSize="8sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_display"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_file"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btn_member"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_btn_corner"
+            android:text="接收人"
+            android:textColor="#fff"/>
+
+        <Button
+            android:id="@+id/btn_file"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_btn_corner"
+            android:text="附带文件"
+            android:textColor="#fff"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_check"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_check"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_btn_corner"
+            android:text="全选"
+            android:textColor="#fff"/>
+
+        <Button
+            android:id="@+id/btn_back_check"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_btn_corner"
+            android:text="反选"
+            android:textColor="#fff"/>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="2"
+            android:background="@drawable/shape_btn_corner"
+            android:text="确定"
+            android:textColor="#fff"/>
+    </LinearLayout>
+
+</LinearLayout>

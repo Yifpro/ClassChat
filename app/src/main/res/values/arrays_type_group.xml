@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arr_group_type">
+        <item>只有群主可以邀请人</item>
+        <item>群成员也能邀请人进群</item>
+        <item>除了群主邀请，只能通过申请加入此群</item>
+        <item>任何人都能加入此群</item>
+    </string-array>
+</resources>

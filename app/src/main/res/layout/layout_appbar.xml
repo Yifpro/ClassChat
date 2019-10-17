@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.wyf.classchat.weight.AutoToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:minHeight="?attr/actionBarSize"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    app:popupTheme="@style/OverflowMenu">
+
+    <TextView
+        android:id="@+id/atb_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:id="@+id/atb_iv_left"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/atb_tv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/atb_iv_right"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/atb_tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="right"
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:visibility="gone"/>
+
+</com.example.wyf.classchat.weight.AutoToolbar>

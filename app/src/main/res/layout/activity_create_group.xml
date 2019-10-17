@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_appbar" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_margin="12dp">
+
+        <ImageView
+            android:id="@+id/iv_header"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="72dp"
+            android:contentDescription="@string/content_description_default"
+            android:background="@mipmap/ic_classchat" />
+
+        <EditText
+            android:id="@+id/et_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="@string/limit_group_name"
+            android:textCursorDrawable="@drawable/edittext_cursor_color"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_group_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_textarea"
+            android:enabled="true"
+            android:gravity="top"
+            android:hint="@string/limit_group_desc"
+            android:maxLines="8"
+            android:minLines="5"
+            android:scrollbars="vertical"
+            android:textCursorDrawable="@drawable/edittext_cursor_color" />
+
+        <Button
+            android:id="@+id/btn_rollcall_commit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/determine"
+            android:textColor="#fff" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/create_terms" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/service_terms"
+                android:textColor="@color/colorPrimary" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

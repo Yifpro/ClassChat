@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_settins"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wyf.classchat.feature.group.GroupSettingsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gaywhite">
+
+        <com.example.wyf.classchat.weight.MyScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/activity_setting_nav" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <include layout="@layout/activity_setting_item_one" />
+
+                <include layout="@layout/activity_settings_item_two" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp">
+
+                    <Button
+                        android:id="@+id/btn_group_exit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/shape_btn_corner"
+                        android:text="退出该群"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.example.wyf.classchat.weight.MyScrollView>
+
+        <include layout="@layout/layout_appbar" />
+
+    </RelativeLayout>
+</FrameLayout>

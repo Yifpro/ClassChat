@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:text="我的圈名片"
+                android:textColor="#000"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_notice_author"
+                style="@style/GroupFuncText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"/>
+
+            <ImageButton
+                style="@style/GroupFuncImg"
+                android:layout_width="14dp"
+                android:layout_height="14dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gaywhite"/>
+
+        <LinearLayout
+            android:id="@+id/group_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="圈成员"
+                android:textColor="#000"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_notice_read_count"
+                    style="@style/GroupFuncText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="名群成员"/>
+
+                <ImageButton
+                    android:id="@+id/ib_cheng"
+                    style="@style/GroupFuncImg"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_add_admin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:text="任命管理员"
+            android:textColor="#000"
+            android:textSize="16sp"/>
+
+
+
+
+
+    </LinearLayout>
+</LinearLayout>
